@@ -1,0 +1,11 @@
+위쪽 Sequential Feature Selection:
+기존 feature 중 일부를 고르는 방법이다.
+새 feature를 만들지 않는다.
+sklearn.preprocessing이나 sklearn.decomposition이 아니라 feature_selection 쪽 개념이다.
+
+아래쪽 PCA:
+기존 feature들을 조합해서 PC1, PC2 같은 새로운 feature를 만드는 방법이다.
+sklearn.decomposition.PCA에 해당한다.
+
+preprocessing:
+이 슬라이드의 주제는 아니지만, PCA 전에 StandardScaler 같은 전처리를 자주 사용한다.
