@@ -1,0 +1,19 @@
+Roc curve는 분류 모델에서 threshold를 바꿔가며 TPR과 FPR의 변화를 보여주는 그래프
+-> 좋은 모델일수록 ROC curve가 왼쪽 위에 가까워지고,
+AUC가 1에 가까울수록 좋은 모델이야.
+
+
+predict_proba(X_test2)
+= 각 클래스에 속할 확률을 반환
+
+probas[:, 1]
+= class 1, 즉 positive일 확률만 꺼냄
+
+roc_curve(y_test, probas[:, 1], pos_label=1)
+= threshold를 여러 개 바꿔가며 FPR, TPR 계산
+
+auc(fpr, tpr)
+= ROC curve 아래 면적 계산
+
+plt.plot(fpr, tpr)
+= ROC curve 그리기
